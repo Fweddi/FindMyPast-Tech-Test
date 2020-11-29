@@ -1,4 +1,6 @@
 const formatRows = require('./formatRows');
+const generatePrimes = require('./generatePrimes');
+const multiplyPrimes = require('./multiplyPrimes');
 
 const generatePrimeTable = (n) => {
     if (typeof n !== 'number') {
@@ -9,23 +11,11 @@ const generatePrimeTable = (n) => {
         return false;
     }
 
-    let primes = generateNPrimes(n);
+    let primes = generatePrimes(n);
 
     let multiples = multiplyPrimes(primes);
 
     return formatRows(primes, multiples);
-}
-
-const generateNPrimes = (n) => {
-    return [2];
-}
-
-const multiplyPrimes = (primes) => {
-    return {
-        2: {
-            2: 4
-        }
-    }
 }
 
 module.exports = generatePrimeTable;
