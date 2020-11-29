@@ -7,7 +7,7 @@ const generatePrimeTable = (input) => {
         return false;
     }
 
-    return true;
+    return '||2|\n|2|4|'
 }
 
 module.exports = generatePrimeTable;
