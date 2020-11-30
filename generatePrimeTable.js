@@ -1,6 +1,4 @@
-const formatRows = require('./formatRows');
-const generatePrimes = require('./generatePrimes');
-const multiplyPrimes = require('./multiplyPrimes');
+const { generatePrimes, multiplyPrimes, formatRows } = require('./helpers');
 
 const generatePrimeTable = (n) => {
     if (typeof n !== 'number') {
