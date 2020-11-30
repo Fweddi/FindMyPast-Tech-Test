@@ -1,7 +1,7 @@
 const { generatePrimes, multiplyPrimes, formatRows } = require('./helpers');
 
 const generatePrimeTable = (n) => {
-    if (typeof n !== 'number') {
+    if (typeof n !== 'number' || isNaN(n)) {
         return false;
     }
 

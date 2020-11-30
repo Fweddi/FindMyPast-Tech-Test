@@ -6,6 +6,10 @@ describe('Validate input', () => {
             expect(generatePrimeTable('10')).toBe(false);
         })
 
+        it('Should give negative result where input is NaN', () => {
+            expect(generatePrimeTable(NaN)).toBe(false);
+        })
+
         it('Should giveß string result where input is an integer', () => {
             expect(typeof generatePrimeTable(10)).toBe('string');
         })
