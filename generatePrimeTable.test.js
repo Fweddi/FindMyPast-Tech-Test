@@ -5,8 +5,8 @@ describe('Validate input', () => {
         it('Should give negative result where input is a string', () => {
             expect(generatePrimeTable('10')).toBe(false);
         })
-        
-        it('Should give string result where input is an integer', () => {
+
+        it('Should giveß string result where input is an integer', () => {
             expect(typeof generatePrimeTable(10)).toBe('string');
         })
     })

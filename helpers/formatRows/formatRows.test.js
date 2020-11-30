@@ -19,7 +19,7 @@ describe('Test multiplication table formatting', () => {
     })
 
     describe('Should give a 3x3 table when N is 2', () => {
-        const primes = [2,3];
+        const primes = [2, 3];
         const multiples = {
             2: {
                 2: 4,
@@ -41,11 +41,11 @@ describe('Test multiplication table formatting', () => {
     })
 
     describe('Should give a 4x4 table when N is 3', () => {
-        const primes = [2,3,5];
+        const primes = [2, 3, 5];
         const multiples = {
             2: {
                 2: 4,
-                3: 6,   
+                3: 6,
                 5: 10
             },
             3: {

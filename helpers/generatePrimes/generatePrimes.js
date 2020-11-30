@@ -26,13 +26,13 @@ const primeSieve = (limit) => {
 
         for (let x = 1; x * x <= limit; x++) {
             for (let y = 1; y * y <= limit; y++) {
-                if (x*x + y*y >= limit) {
+                if (x * x + y * y >= limit) {
                     break;
                 }
 
-                if (([1, 13, 17, 29, 37, 41, 49, 53].includes(r) && n === ((4 * x*x) + (y*y)))
-                    || ([7, 19, 31, 43].includes(r) && n === ((3 * x*x) + (y*y)))
-                    || ([11, 23, 47, 59].includes(r) && x > y && n === ((3 * x*x) - (y*y)))) {
+                if (([1, 13, 17, 29, 37, 41, 49, 53].includes(r) && n === ((4 * x * x) + (y * y)))
+                    || ([7, 19, 31, 43].includes(r) && n === ((3 * x * x) + (y * y)))
+                    || ([11, 23, 47, 59].includes(r) && x > y && n === ((3 * x * x) - (y * y)))) {
                     sieve[n] = !sieve[n];
                 }
             }
@@ -51,7 +51,7 @@ const primeSieve = (limit) => {
 
     // If sieve value is true, push index to results
     sieve.forEach((isPrime, n) => {
-        if(isPrime) {
+        if (isPrime) {
             results.push(n);
         }
     })
