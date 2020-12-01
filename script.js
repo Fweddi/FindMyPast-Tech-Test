@@ -1,8 +1,8 @@
 const generatePrimeTable = require("./helpers/generatePrimeTable");
 
 if (process.argv.length < 3) {
-    console.error('Error: Input parameter required')
-    return;
+  console.error("Error: Input parameter required");
+  return;
 }
 
 let input = parseInt(process.argv[2], 10);

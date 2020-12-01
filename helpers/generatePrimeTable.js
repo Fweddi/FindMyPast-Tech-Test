@@ -1,19 +1,19 @@
-const { generatePrimes, multiplyPrimes, formatRows } = require('.');
+const { generatePrimes, multiplyPrimes, formatRows } = require(".");
 
 const generatePrimeTable = (n) => {
-    if (typeof n !== 'number' || isNaN(n)) {
-        return false;
-    }
+  if (typeof n !== "number" || isNaN(n)) {
+    return false;
+  }
 
-    if (n < 1) {
-        return false;
-    }
+  if (n < 1) {
+    return false;
+  }
 
-    let primes = generatePrimes(n);
+  let primes = generatePrimes(n);
 
-    let multiples = multiplyPrimes(primes);
+  let multiples = multiplyPrimes(primes);
 
-    return formatRows(multiples);
-}
+  return formatRows(multiples);
+};
 
 module.exports = generatePrimeTable;
