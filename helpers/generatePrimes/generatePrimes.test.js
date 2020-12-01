@@ -40,4 +40,15 @@ describe('Test if prime generation algorithm works', () => {
             expect(generatePrimes(25)).toStrictEqual(expected);
         })
     })
+
+    describe('Case when we want to generate 50000 primes', () => {
+        let start = new Date().getTime();
+        generatePrimes(50000);
+        let end = new Date().getTime();
+        let difference = end - start;
+
+        it('Should generate 50000 primes in under 1 second', () => {
+            expect(difference).toBeLessThan(1000);
+        })
+    })
 })
