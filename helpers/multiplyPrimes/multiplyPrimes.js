@@ -1,12 +1,21 @@
 const multiplyPrimes = (primes) => {
-    let multiples = {};
+    if(primes.length === 0) {
+        return null;
+    }
+
+    let firstMultiples = [null, ...primes];
+    let allMultiples = [firstMultiples];
+
     primes.forEach(primeA => {
+        let multiples = [primeA];
         primes.forEach(primeB => {
-            multiples[primeA] = { ...multiples[primeA], [primeB]: primeA * primeB }
+            let multiple = primeA * primeB;
+            multiples.push(multiple);
         })
+        allMultiples.push(multiples);
     })
 
-    return multiples;
+    return allMultiples;
 }
 
 module.exports = multiplyPrimes;

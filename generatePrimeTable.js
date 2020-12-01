@@ -13,7 +13,7 @@ const generatePrimeTable = (n) => {
 
     let multiples = multiplyPrimes(primes);
 
-    return formatRows(primes, multiples);
+    return formatRows(multiples);
 }
 
 module.exports = generatePrimeTable;

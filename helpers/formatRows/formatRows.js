@@ -1,21 +1,18 @@
 const calculatePadding = require('../calculatePadding/calculatePadding');
 
-const formatRows = (primes, multiples) => {
-    let largestPrime = primes[primes.length - 1]
-    let greatestDigitCount = (largestPrime * largestPrime).toString().length;
+const formatRows = (allMultiples) => {
+  let lastIndex = allMultiples.length - 1;
+  let greatestDigitCount = allMultiples[lastIndex][lastIndex].toString().length;
 
-    let formattedPrimes = primes.map(prime => prime += calculatePadding(prime, greatestDigitCount));
-    let firstRow = '|' + calculatePadding(0, greatestDigitCount) + '|' + formattedPrimes.join('|') + '|';
-
-    let remainingRows = primes.map(prime => {
-        let primeMultiples = Object.values(multiples[prime]);
-        let formattedPrime = prime += calculatePadding(prime, greatestDigitCount);
-        let formattedMultiples = primeMultiples.map(prime => prime += calculatePadding(prime, greatestDigitCount));
-
-        return '|' + formattedPrime + '|' + formattedMultiples.join('|') + '|';
+  let rows = allMultiples.map((multiples) => {
+    let formattedMultiples = multiples.map(multiple => {
+      let padding = calculatePadding(multiple, greatestDigitCount);
+      return multiple ? multiple += padding : padding;
     });
+    return '|' + formattedMultiples.join('|') + '|';
+  });
 
-    return firstRow + '\n' + remainingRows.join('\n');
+  return rows.join('\n');
 }
 
 module.exports = formatRows;

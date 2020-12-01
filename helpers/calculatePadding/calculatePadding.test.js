@@ -1,6 +1,6 @@
 const calculatePadding = require('./calculatePadding');
 
-describe('Test padding is calcuated correctly', () => {
+describe('Test padding is calculated correctly', () => {
     it('Should return a string containing 4 spaces', () => {
         const result = calculatePadding(0, 4);
         expect(result).toEqual('    ');
