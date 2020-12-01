@@ -1,6 +1,6 @@
-const generatePrimeTable = require("./generatePrimeTable");
+const generatePrimeTable = require("./helpers/generatePrimeTable");
 
-if(process.argv.length < 3) {
+if (process.argv.length < 3) {
     console.error('Error: Input parameter required')
     return;
 }

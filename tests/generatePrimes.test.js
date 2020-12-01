@@ -1,4 +1,4 @@
-const generatePrimes = require('./generatePrimes');
+const generatePrimes = require('../helpers/generatePrimes');
 
 describe('Test if prime generation algorithm works', () => {
     describe('Case when we want to generate 1 prime', () => {

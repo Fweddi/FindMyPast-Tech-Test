@@ -1,4 +1,4 @@
-const { generatePrimes, multiplyPrimes, formatRows } = require('./helpers');
+const { generatePrimes, multiplyPrimes, formatRows } = require('.');
 
 const generatePrimeTable = (n) => {
     if (typeof n !== 'number' || isNaN(n)) {

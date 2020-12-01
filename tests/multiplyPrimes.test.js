@@ -1,4 +1,4 @@
-const multiplyPrimes = require('./multiplyPrimes');
+const multiplyPrimes = require('../helpers/multiplyPrimes');
 
 describe('Test if primes are multiplied together', () => {
     describe('Case when there is 1 prime', () => {

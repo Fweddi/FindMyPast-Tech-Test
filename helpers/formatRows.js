@@ -1,4 +1,4 @@
-const calculatePadding = require('../calculatePadding/calculatePadding');
+const calculatePadding = require('./calculatePadding');
 
 const formatRows = (allMultiples) => {
   let lastIndex = allMultiples.length - 1;

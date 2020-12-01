@@ -1,4 +1,4 @@
-const formatRows = require('./formatRows');
+const formatRows = require('../helpers/formatRows');
 
 describe('Test multiplication table formatting', () => {
     describe('Should give a 2x2 table when N is 1', () => {

@@ -1,4 +1,4 @@
-const sievePrimes = require('./sievePrimes');
+const sievePrimes = require('../helpers/sievePrimes');
 
 describe('Test if prime generation algorithm works', () => {
     describe('Case when prime count is -1', () => {

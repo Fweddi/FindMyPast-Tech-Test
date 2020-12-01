@@ -1,4 +1,4 @@
-const calculatePadding = require('./calculatePadding');
+const calculatePadding = require('../helpers/calculatePadding');
 
 describe('Test padding is calculated correctly', () => {
     it('Should return a string containing 4 spaces', () => {

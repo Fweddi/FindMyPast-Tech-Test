@@ -1,4 +1,4 @@
-const sievePrimes = require('../sievePrimes/sievePrimes');
+const sievePrimes = require('./sievePrimes');
 
 const generatePrimes = (n) => {
     // If n is more than 5, sieve for estimate and take the first n elements

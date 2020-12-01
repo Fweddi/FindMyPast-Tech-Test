@@ -1,4 +1,4 @@
-const generatePrimeTable = require('./generatePrimeTable');
+const generatePrimeTable = require('../helpers/generatePrimeTable');
 
 describe('Validate input', () => {
     describe('Check input type', () => {
